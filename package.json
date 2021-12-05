@@ -1,0 +1,37 @@
+{
+	"name": "comet",
+	"version": "0.1.0",
+	"description": "",
+	"main": "cli.js",
+	"scripts": {
+		"watch": "nodemon --watch src/ --exec 'npx tsc' -e ts",
+		"dev:server": "nodemon ./src/cli.ts server",
+		"package": "pkg ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lostVkng/comet.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/lostVkng/comet/issues"
+	},
+	"homepage": "https://github.com/lostVkng/comet#readme",
+	"bin": {
+		"comet": "./build/cli.js"
+	},
+	"pkg": {
+		"scripts": "build/**/*.js",
+		"targets": [ "node14-macos-x64" ],
+    	"outputPath": "dist"
+	},
+	"devDependencies": {
+		"@types/node": "^16.11.11",
+		"nodemon": "^2.0.15",
+		"pkg": "^5.5.1",
+		"ts-node": "^10.4.0",
+		"typescript": "^4.5.2"
+	}
+}

@@ -1,0 +1,15 @@
+[Unit]
+Description=Comet Cron Manager
+
+[Service]
+User=<YourUser>
+
+WorkingDirectory=/home/ubuntu/
+ExecStart=comet server
+Type=simple
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
