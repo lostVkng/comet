@@ -9,7 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - run: npm install
+      - name: npm install
+        run: npm install
+      - name: compile typescript
+        run: rpm run build
       - name: Build Packages
         run: npm run package
        
