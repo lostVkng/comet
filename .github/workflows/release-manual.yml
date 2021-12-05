@@ -1,0 +1,31 @@
+name: Release CI - Manual
+on: 
+  workflow_dispatch
+jobs:
+  deploy:
+    name: build releases
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - name: npm install
+        run: npm install
+      - name: compile typescript
+        run: rpm run build
+      - name: Build Packages
+        run: npm run package
+       
+      # This will draft a new release & will attach the binaries produced by the above outputs.
+      # You still need to publish this release though after job ends.
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: true
+          files: |
+            ./dist/comet-linux
+            ./dist/comet-macos
+            ./dist/comet-win.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # You don't need to add this in secrets it's by default.
