@@ -24,7 +24,8 @@ npm run package
 Build the binary
 
 *Method 2* - Download binary from this repo
-Download from packages
+
+Download from releases
 
 ### 2. Move binary to within PATH
 `/usr/local/bin` is popular place for CLI apps, but nothing preventing you from a different directory and adding it to your path.
