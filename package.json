@@ -6,6 +6,7 @@
 	"scripts": {
 		"watch": "nodemon --watch src/ --exec 'npx tsc' -e ts",
 		"dev:server": "nodemon ./src/cli.ts server",
+		"build": "npx tsc",
 		"package": "pkg ."
 	},
 	"repository": {
