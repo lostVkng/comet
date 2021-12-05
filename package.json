@@ -24,7 +24,7 @@
 	},
 	"pkg": {
 		"scripts": "build/**/*.js",
-		"targets": [ "node14-macos-x64" ],
+		"targets": [ "node16-macos", "node16-linux", "node16-win"],
     	"outputPath": "dist"
 	},
 	"devDependencies": {
