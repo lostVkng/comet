@@ -25,7 +25,7 @@ Build the binary
 
 *Method 2* - Download binary from this repo
 
-Download from releases
+Download from releases, the binaries are named for OS, just remove the -ubuntu/-macos/-win from the name.
 
 ### 2. Move binary to within PATH
 `/usr/local/bin` is popular place for CLI apps, but nothing preventing you from a different directory and adding it to your path.
