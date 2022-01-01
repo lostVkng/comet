@@ -13,6 +13,7 @@ note: there are a few dev dependencies (typescript, nodemon, pkg) but no compile
 git clone https://github.com/lostVkng/comet
 cd comet
 npm install
+npm run build
 ```
 Clone this directory
 

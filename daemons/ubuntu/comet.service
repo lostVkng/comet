@@ -1,10 +1,10 @@
 [Unit]
 Description=Comet Cron Manager
+After=network.target
 
 [Service]
-User=<YourUser>
+User=comet
 
-WorkingDirectory=/home/ubuntu/
 ExecStart=comet server
 Type=simple
 TimeoutStopSec=10
